@@ -1,0 +1,159 @@
+	body {
+		background-color: #8BA1BB;
+		font-family: Arial;     
+		margin: 0;
+	}
+	p.categorie {
+		background-color: black;
+		color: white;
+		display: inline-block; /* permet d'aligner recette au centre, mais aussi reduire le bloc et permettre d'afficher
+		 autre chose sur la meme ligne*/
+		margin-top: 0px;
+		
+		margin-bottom: 0px;
+		padding: 8px 18px;
+
+	} 
+	div.contenu{
+		background-color: white;
+		margin: 0px 10% 80px 10%;  /*marge externe,top-right-bottom-left*/
+		padding: 30px; /*marge interne*/
+		min-width:330px; /*pour que la description reste sur 2 lignes minimales*/
+		box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);/* 4eme correspond a ombre de partout*/
+	}
+	h1{
+		text-align: center;
+		margin-bottom: 10px;
+		margin-top: 10px;
+
+	}
+	p.description{
+		text-align: center;
+		max-width: 400px;
+		font-size: 14px;
+		
+		display: inline-block; /* permet de faire centrer le bloc entier */ 
+		/* 3 valeurs du display:bloc, in-line et in-line bloc */
+	}
+	div.description{
+		text-align: center; /* commentaire CSS */ 
+		/* permet de faire centre le bloc du display*/
+	}
+	.centre {
+		text-align: center;
+		width: 100%; /*permet a l'image d'etre centree*/
+		
+	}
+	div.categorie{
+		margin-bottom: -18px; /* pour que recette superpose sur le bleu et le blanc(body et div.contenu)*/  
+		font-weight: bold; /* ecriture en gras*/
+		font-size: 16px;
+		margin-top: 60px;
+	}
+	div.separateur{ /* c'est une maniere de souligner*/ 
+		background-color: black;
+		height: 1px;
+		width: 100px;
+		margin-left: auto; /* auto utilise tout ce qui a sa gauche, sachant que l'objectif est de centrer */
+		margin-right: auto;/* auto permet a margin d'utiliser tout ce qui est a sa droite*/
+	}
+	table.info{
+		position: absolute; /* pour dire que la table ne prend pas d'espace, ainsi elle va etre sur l'image*/
+		bottom:0px; /* met la table en bas de l'image*/
+		width: 100%; /* elargit le tableau sur le width(horizontalement)*/
+		color: white; /* les ecritures sont en blanc*/
+		background: #6C829DC0; /*couleur bleu clair*/
+		height: 80px; /* hauteur du tableau*/
+
+	}
+	div.info{
+		position: relative;/*static,relative,absolute = veut dire prend pas d'espace, ideal pour la superposition
+		,possible d'ajouter pour relative bottom ou top = -10px */
+	}
+	table.info td { /*les td de la table de classe info,seules, sont concernees, different du virgule qui permet d'appliquer un style a plusieurs*/
+		text-align: center; /* aligne les td (table data) */
+		font-size: 14px;
+		vertical-align: top;/*amene vers le haut, pour le rapprocher du th(table header)*/
+	}
+	table.info th {
+		font-size: 16px;
+		vertical-align: bottom;/* pour amener vers le bas, pour le rapprocher du td*/
+		padding-bottom: 8px ;/*marge interne, permet de mieux separer td et   th */
+	}
+	img.info{
+		display: block; /* pour ne pas que l'image ne se deborde vers le bas*/
+		max-height: 400px; /* donne une taille max a l'image pour ne pas que l'image ne deborde */ 
+		object-fit: cover; /*pour ne pas que l'image se deforme, fait un effet zoom lorsque la taille de l'ecran augmente*/
+		min-height: 200px; /*pour ne pas que la table ne se superpose 
+		sur les ecriture au moment du chargement*/ 
+		background-color: lightgray; /* donner un fond grisatre au chargement,avant l'arrivee de l'image*/
+	}
+	div.colonne{/* ou div.colonne1, div.colonne2 */
+		width: 45%; /*pour que les colonnes aient une largeur commune de 50% de la largeur*/
+		margin-top: 10px;	
+	}
+	div.colonne1{
+		display: inline-block; /*pour que colonne2 soit sur la meme ligne*/
+		/*background-color: lightcoral;*/ /*debugging*/
+		margin-right:10% ;
+		
+	}
+	div.colonne2{
+		float: right;/* amene un probleme de debordement pour la colonne preparation,solution: overflow*/
+		/*background-color: lightgreen;*/
+		
+	}
+	div.colonne h2{/*seuls les h2 des 2 colonnes*/
+		text-align: center;
+		text-transform: uppercase;/*mettre en majuscule*/
+		font-size: 16px;
+		border-bottom: 5px solid #6C829D;/*pour
+		 souligner Propriete: taille-nature-couleur*/
+		padding: 5px;
+	}
+	div.item p{
+		border: 1px solid lightgray;/*Propriete: taille-nature-couleur*/
+		padding: 8px 0; /* paddinng vertical- padding horizontal*/
+		font-size: 14px;
+		text-align: center;
+		/*margin: 4px 0px;/*margin vertical(haut-bas)=4px margin horizontal(droite-gauche)= 0px*/
+		margin-top: 4px;
+		margin-bottom: 0px;
+
+	}
+	table.preparation p.numero{
+		background-color: #6C829D;
+		color: white;
+		text-align: center;
+		width: 25px;
+		height: 25px;
+		font-size: 14px;
+		font-weight: bold;
+		padding-top: 5px; /*grace a box-sizing, le padding va juste deplacer ce qui est a l'interieur*/
+		box-sizing: border-box; /* permet d'ajouter du padding sans modifier la forme geometrique du block, de ce fait le padding
+		decale juste ce qui est a l'interieur*/
+		border-radius: 50%;/*permet d'avoir des bords arrondis(ex:4px),ou d'avoir la bulle si 50% */ 
+		margin-top: 0px; /* pour que les bulles aillent vers le haut*/
+
+	}
+	table.preparation td{
+		vertical-align: top;/* aligner les bulles et les descriptions vers le haut*/
+
+	}
+	table.preparation td.preparation_etape{/*les td de classe preparation_etape*/
+		font-size: 14px;
+		padding-left: 6px; /*pour espacer bulles et description*/
+		padding-bottom: 10px;
+
+	}
+	table.preparation tr{
+		height: 40px;/* comme c'est une table,height fonctionne comme min-height*/
+	}
+
+	* {/* "*" est un selecteur(as id and class) qui selectionne tout*/ 
+		overflow: auto;/* veut dire que si il ya debordement de readapter le div.contenu*/
+		/*si ca ne marche pas le mettre tout en haut*/
+		/* overflow: visible; c'est le contraire, permet visible les debordements*/
+		/*apres faudra juste entourer la colonne preparation/Ingredients 
+		pour qu'ils ne soient pas affectes*/  
+	}
