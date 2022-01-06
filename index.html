@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Recette</title>  <!-- Police-->
+		<meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--adapter la page avec l'ecran du phone -->
+
+		
+		<!-- vertical-horizontal, ou top-right-down-left pour les marges -->
+		<link rel="stylesheet" href="recette.css"> <!-- balise pour charger le fichier css-->
+		 <!-- <style> </style> pour mettre du css-->
+	</head>
+	<body>
+		<div class="centre categorie">
+		<p class="categorie">Recette</p>  <!--ou id="categorie" c different, car class peut etre applique a plusieurs --> 
+		</div>
+		
+
+		<div class="contenu">
+		<h1>Gateau au chocolat</h1>
+
+		<div class="separateur"> 
+		
+		</div>
+
+		<div class="description">
+		<p class="description">Cette recette facile du gateau au chocolat est un  grand classique et un régal pour les gourmands.</p>
+		</div>
+
+		<div class="info"> <!-- -->
+
+		<img class="centre info" src="gateau.jpg"> 
+		<!-- ou on met src="https://jonathanroux.com/gateau.jpg?id=9998" pour forcer le navigateur a recharger le contenu-->
+		<!-- le display block permet d'enlever le petit espace se trouvant en bas de l'image en debuggant avec background color et inspection-->
+
+		<table class="info"  >
+			<!--RRVVBBopacite-->
+		  <tr> 
+					<th>Difficulté</th>
+					<th> Préparation</th>
+					<th> Cuisson</th>
+					<th> Temps total</th>
+				</tr> 
+				<tr>
+					<td>Facile</td> <td>10min</td> <td>25min</td> <td> 35min</td>
+				</tr>
+
+		</table>
+		</div>
+
+		<div class="colonne1 colonne">
+		<h2>Ingrédients</h2>
+
+
+		<div class="item"> <!-- alt+shift pour selectionner en colonne-->
+			<p>Chocolat noir: 200g</p>
+			<p>Beurre: 200g</p>
+			<p>Sucre: 150g</p>
+			<p>Farine: 80g</p>
+
+	    </div>  <!-- div class item-->
+		</div>
+		
+
+		<div class="colonne2 colonne">
+		<h2>Préparation</h2>
+
+		
+		<table class="preparation">
+			<tr><td><p class="numero">1</p></td> <td class="preparation_etape">Faire fondre le chocolat avec le beurre</td>
+			</tr>
+			<tr> <td><p class="numero">2</p></td> <td class="preparation_etape"> Mélanger le sucre, les oeufs et la farine</td>
+			</tr>
+			<tr>
+			<td><p class="numero">3</p></td> <td class="preparation_etape">Mélanger le tout pour faire une patte</td>
+			</tr>
+			<tr>
+			 <td><p class="numero">4</p></td> <td class="preparation_etape">Mettre au four</td>
+			</tr>
+
+
+		</table>
+
+		</div>
+
+		</div>
+	</body>
+</html>
